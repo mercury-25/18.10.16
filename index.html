@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="HelloWorldApp">
+<head>
+	<meta charset="UTF-8">
+    <title>hello</title>
+
+   
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	
+<script>	
+  var app = angular.module("HelloWorldApp",[])
+    .controller("defaultCtrl", function ($scope) {
+	   $scope.value = "--------";
+	
+	$scope.setNewValue = function () {
+	   $scope.value = "hello world";
+	}
+   });
+</script>
+</head>
+<body ng-controller="defaultCtrl">
+   {{value}} <br />
+   <button ng-click="setNewValue()">Cahnge</button>
+</body>
+</html>
